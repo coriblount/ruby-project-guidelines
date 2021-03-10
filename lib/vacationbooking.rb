@@ -1,4 +1,4 @@
-class VacationBooking
+class VacationBooking #runs logic
     attr_reader :user, :destination, :trip, :sight, :flight
 
     def run

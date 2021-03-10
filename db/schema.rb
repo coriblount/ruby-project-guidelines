@@ -12,12 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2021_03_08_215824) do
 
-  create_table "destination", force: :cascade do |t|
+  create_table "destinations", force: :cascade do |t|
     t.string "name"
   end
 
   create_table "flights", force: :cascade do |t|
     t.string "name"
+    t.integer "trip_id"
   end
 
   create_table "sights", force: :cascade do |t|
@@ -26,10 +27,9 @@ ActiveRecord::Schema.define(version: 2021_03_08_215824) do
   end
 
   create_table "trips", force: :cascade do |t|
-    t.string "name"
-    t.string "user"
-    t.string "sights"
-    t.string "flights"
+    t.integer "user_id"
+    t.integer "flights_id"
+    t.integer "destination_id"
   end
 
   create_table "users", force: :cascade do |t|
