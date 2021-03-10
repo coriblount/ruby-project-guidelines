@@ -6,8 +6,8 @@ Destinations.destroy_all
 
 
 #user data
-user1 = User.create(name:"shane", password: "password1")
-user2 = User.create(name:"cori", password: "0000")
+user1 = User.create(name: "shane", password: "password1")
+user2 = User.create(name: "cori", password: "0000")
 user3 = User.create(name: "drake", password: "adonis")
 user4 = User.create(name: "beyonce", password: "blue ivy")
 user5 = User.create(name: "oprah", password: "stedman")
