@@ -23,10 +23,11 @@ User can log out
 User can browse all Flights 
 User can browse all Destinations
 User can browse all Destination’s sights
-User can select a favorite Destination
-User can clear their favorite Destination
+User can pay to remove the spam ads we have installed on our app to monetize the accidental clicking from children who think they are playing a game.
+
 
 #### Stretch Goals
 User can leave a review for a Destination
-User can pay to remove the spam ads we have installed on our app to monetize the accidental clicking from children who think they are playing a game.
+User can select a favorite Destination
+User can clear their favorite Destination
 
