@@ -45,6 +45,20 @@ class VacationBooking #runs logic
                 end
             end
         end
+        if choice == "Create Account"
+            new_username = @@prompt.ask("Enter New Username")
+            new_password = @@prompt.ask("Enter New Password")
+            User.create(name: new_username, password: new_password)
+            puts "Account created successfully... returning to login menu..."
+            sleep(5)
+            login
+        end
+        if choice == "Exit"
+            system "clear"
+            puts "Thank you for using the Vacation Booking app..."
+            sleep(3)
+            system "clear"
+        end
     end
 
     def main_menu
@@ -61,7 +75,7 @@ class VacationBooking #runs logic
             annoying_advertisements if ad_chance == 2
             sights
         elsif choice == "Sign out"
-            annoying_advertisements if ad_chance == 2
+            annoying_advertisements
             sign_out
         end
     end
@@ -78,6 +92,7 @@ class VacationBooking #runs logic
         puts "3"
     end
 
+    # Clears the terminal. Shows user an ad. Sends user back to login.
     def sign_out
         system "clear"
         puts "You have successfully signed out... \nReturning to the login screen..."
@@ -87,6 +102,7 @@ class VacationBooking #runs logic
         login
     end
 
+    # Ad methods
     def ad1
         system "clear"
         puts "        +--^----------,--------,-----,--------^-,
@@ -101,7 +117,8 @@ class VacationBooking #runs logic
        (________(                
         `------'   "
         puts "It's huntin season boys!!! \nHead on down to Cori and Shane's Gunshop now! \nThe follow ad was brought to you by Cori and Shane's Gunshop..."
-        sleep(6)
+        play_ad(1)
+        sleep(50)
         system "clear"
     end
 
@@ -175,5 +192,14 @@ class VacationBooking #runs logic
         puts "You have been selected as our new winner! \nYou get to view more advertisements for free!!! \nEnjoy =)"
         sleep(5)
         annoying_advertisements
+    end
+
+    # Plays audio / music for each ad.
+    def play_ad(ad_number)
+        system ("open ~/Downloads/gunad.mp3") if ad_number == 1
+        system ("open ~/Downloads/gunad.mp3") if ad_number == 2
+        system ("open ~/Downloads/gunad.mp3") if ad_number == 3
+        system ("open ~/Downloads/gunad.mp3") if ad_number == 4
+        system ("open ~/Downloads/gunad.mp3") if ad_number == 5
     end
 end
