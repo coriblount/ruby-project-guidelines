@@ -1,4 +1,5 @@
 class VacationBooking #runs logic
+    prompt = TTY::Prompt.new
     attr_reader :user, :destination, :trip, :sight, :flight
     def run
         welcome 
@@ -17,11 +18,13 @@ class VacationBooking #runs logic
             if (question == "Login") 
                 puts "Hello"
                 login_name = prompt.ask("Enter Username") 
+                @@user = User.find_by(name: login_name)
                 login_password = prompt.ask("What is your password?")
-                    if User.all.include?(login_name) 
-                        puts "Your dream vacation is only a few clicks away!"
+                @@user = User.find_by(password: login_password)
+                        puts "#{@@user.name.capitalize} your dream vacation is only a few clicks away!"
+                    else
+                        puts "create account"
                 end
             end
-        end
-
+#if User.all.include?(login_name) && User.all.find_by(password:login_password)          
 end
