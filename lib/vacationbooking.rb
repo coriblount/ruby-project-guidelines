@@ -110,8 +110,23 @@ class VacationBooking #runs logic
         puts "Thanks for visiting our app! We hope you enjoy your vacation" 
         sleep(5)
         system "clear"
+        review
     end
 
+    # Allows user to leave a review after booking a trip.
+    def review
+        choice = @@prompt.select("Leave a review?", ["Create review", "Exit"])
+        if choice == "Create review"
+            review_name = @@prompt.ask("Enter Reviewer Name")
+            rating = @@prompt.select("Rate 1-5", ["1", "2", "3", "4", "5"])
+            Destinations.new_review(rating, review_name)
+            puts "Thank you for your review!"
+            sleep(5)
+            system "clear"
+        elsif choice == "Exit"
+
+        end
+    end
 
     # Clears the terminal. Shows user an ad. Sends user back to login.
     def sign_out
@@ -139,7 +154,7 @@ class VacationBooking #runs logic
         `------'   "
         puts "It's huntin season boys!!! \nHead on down to Cori and Shane's Gunshop now! \nThe follow ad was brought to you by Cori and Shane's Gunshop..."
         play_ad(1)
-        sleep(50)
+        sleep(6)
         system "clear"
     end
 
@@ -155,6 +170,7 @@ class VacationBooking #runs logic
           '_________'
            '-------' "
         puts "Ya thirsty partner!?!?!?!?!?!? \nHead on down to Cori and Shane's Coffeeshop now! \nThe follow ad was brought to you by Cori and Shane's Coffeeshop..."
+        play_ad(1)
         sleep(6)
         system "clear"
     end
@@ -193,6 +209,7 @@ class VacationBooking #runs logic
       {__|""|_______'-
       `---------------'"
       puts "You got games on yo phone? \nCall up Cori and Shane's Mobileshop to talk about these amazing prices!!! \nThis ad was brought to you by Cori and Shane's Mobilshop."
+      play_ad(1)
       sleep(6)
       system "clear"
     end
@@ -202,6 +219,7 @@ class VacationBooking #runs logic
         gamestop = Artii::Base.new(:font => "slant")
         puts gamestop.asciify("Gamestop")
         puts "WE DON'T HAVE THE PS5 IN STOCK YET PLEASE STOP CALLING US. \nHead on down to Cori and Shane's ripoff Gamestop for the worst prices imaginable. \nThis ad was brought to you by Cori and Shane's ripoff Gamestop."
+        play_ad(1)
         sleep(6)
         system "clear"
     end
@@ -211,6 +229,7 @@ class VacationBooking #runs logic
         congrats = Artii::Base.new(:font => "slant")
         puts congrats.asciify("Congratulations")
         puts "You have been selected as our new winner! \nYou get to view more advertisements for free!!! \nEnjoy =)"
+        play_ad(1)
         sleep(5)
         annoying_advertisements
     end
