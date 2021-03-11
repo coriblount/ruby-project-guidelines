@@ -1,3 +1,3 @@
 class Sights < ActiveRecord::Base
-belongs_to :destination
+    belongs_to :destination
 end
