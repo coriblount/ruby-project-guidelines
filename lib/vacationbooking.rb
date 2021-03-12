@@ -6,9 +6,7 @@ class VacationBooking #runs logic
         puts advertisement.asciify("Advertisement Time")
 
         ad = rand(1..5)
-        if ad == 1
-            ad1
-        elsif ad == 2
+        if ad == 2
             ad2
         elsif ad == 3
             ad3
@@ -139,24 +137,6 @@ class VacationBooking #runs logic
     end
 
     # Ad methods
-    def ad1
-        system "clear"
-        puts "        +--^----------,--------,-----,--------^-,
-        | |||||||||   `--------'     |          O
-        `+---------------------------^----------|
-          `\_,---------,---------,--------------'
-            / XXXXXX /'|       /'
-           / XXXXXX /  `\    /'
-          / XXXXXX /`-------'
-         / XXXXXX /
-        / XXXXXX /
-       (________(                
-        `------'   "
-        puts "It's huntin season boys!!! \nHead on down to Cori and Shane's Gunshop now! \nThe follow ad was brought to you by Cori and Shane's Gunshop..."
-        play_ad(1)
-        sleep(6)
-        system "clear"
-    end
 
     def ad2
         system "clear"
@@ -232,14 +212,5 @@ class VacationBooking #runs logic
         play_ad(1)
         sleep(5)
         annoying_advertisements
-    end
-
-    # Plays audio / music for each ad.
-    def play_ad(ad_number)
-        system ("open ~/Downloads/gunad.mp3") if ad_number == 1
-        system ("open ~/Downloads/gunad.mp3") if ad_number == 2
-        system ("open ~/Downloads/gunad.mp3") if ad_number == 3
-        system ("open ~/Downloads/gunad.mp3") if ad_number == 4
-        system ("open ~/Downloads/gunad.mp3") if ad_number == 5
     end
 end
