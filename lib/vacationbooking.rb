@@ -212,5 +212,6 @@ class VacationBooking #runs logic
         play_ad(1)
         sleep(5)
         annoying_advertisements
+
     end
 end
