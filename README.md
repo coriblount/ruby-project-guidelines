@@ -1,4 +1,4 @@
-# Online Clothing Store
+# Vacation Booking App
 
 Vacation Booking App is Shane and Cori's (@Sdsdsde2, @coriblount) project for phase-1 at Flatiron School.
 
