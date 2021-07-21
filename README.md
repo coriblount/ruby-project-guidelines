@@ -19,4 +19,4 @@ Users can view log out.
 
 ## Background
 
-This project was a group effort. Cori and Shane had the idea of making a Ruby CLI App that was similar helped users book their vacations. This was our first project with Ruby, SQL, and Rake..
+This project was a group effort. Cori and Shane had the idea of making a Ruby CLI App that helped users plan out and book their vacations. This was our first project with Ruby, SQL, and Rake..
